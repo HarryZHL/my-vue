@@ -3,6 +3,7 @@
         <ul>
             <li v-for="(tab,index) in tabs" :class="tab.isCurrent ? 'cur' : ''" @click="changeTab(index)">{{tab.name}}</li>
         </ul>
+        <div class="container" v-for="(item,index) in info" v-if="tabs[index].isCurrent" v-html="item"></div>
     </div>
 </template>
 <script>
@@ -22,6 +23,12 @@
                         isCurrent: false
                     }]
                 }
+            },
+            info:{
+                type:Array,
+                default:function () {
+                    return ['<p>hello vue</p>','<strong>hello vue</strong>','<em>hello vue</em>']
+                }
             }
         },
         methods:{
@@ -37,15 +44,21 @@
 <style lang="scss">
     .tabs{
         text-align:center;
+        font-size:16px;
         ul{
             display: table;
             width: 100%;
             table-layout: fixed;
+            border:1px solid #aaa;
         }
         li{
             display: table-cell;
             margin: 0 10px;
             line-height:40px;
+            border-right:1px solid #aaa;
+            &:last-of-type{
+                border-right:0 none;
+             }
             &.cur{
                 background-color:#20a0ff;
                 color: #fff;

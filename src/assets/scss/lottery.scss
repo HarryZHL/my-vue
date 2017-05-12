@@ -1,0 +1,87 @@
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{margin:0;padding:0}
+
+body{font:12px 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;;background:#fff;-webkit-text-size-adjust:100%;-webkit-font-smoothing: antialiased;}
+
+a{color:#2d374b;text-decoration:none}
+
+a:hover{color:#cd0200;text-decoration:underline}
+
+em{font-style:normal}
+
+li{list-style:none}
+
+img{border:0;vertical-align:middle}
+
+table{border-collapse:collapse;border-spacing:0}
+
+p{word-wrap:break-word}
+
+.lottery{
+  width: 300px;
+  height: 300px;
+  position: relative;
+  border:1px solid #fff;
+  li{
+    box-sizing: border-box;
+    width:100px;
+    height:100px;
+    position: absolute;
+    background-color: #20a0ff;
+    border:1px solid #fff;
+    &.cur{
+      background-color: #f60;
+    }
+    &:nth-of-type(1){
+      left: 0;
+      top:0;
+    }
+    &:nth-of-type(2){
+      left:100px;
+      top:0;
+    }
+    &:nth-of-type(3){
+      left:200px;
+      top:0;
+    }
+    &:nth-of-type(4){
+      left:200px;
+      top:100px;
+    }
+    &:nth-of-type(5){
+      left:200px;
+      top:200px;
+    }
+    &:nth-of-type(6){
+      left:100px;
+      top:200px;
+    }
+    &:nth-of-type(7){
+      left:0;
+      top:200px;
+    }
+    &:nth-of-type(8){
+      left:0;
+      top:100px;
+    }
+  }
+  button{
+    box-sizing: border-box;
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    left: 50%;
+    top:50%;
+    color: #fff;
+    font-size: 20px;
+    transform: translate(-50%,-50%);
+    border: 0 none;
+    padding: 0;
+    margin: 0;
+    background-color: #5bc0de;
+    border-radius: 50%;
+    outline: none;
+    &:active{
+      transform: translate(-50%,-50%) scale(.95);
+    }
+  }
+}
