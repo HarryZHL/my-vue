@@ -10,7 +10,7 @@
             <el-radio-button v-for="city in cities" :label="city" :key="city"></el-radio-button>
         </el-radio-group>
         <Tabs :tabs="tabsArray" :info="infoArray" :style="{width:'600px',margin:'0 auto 20px'}"></Tabs>
-        <Lottery></Lottery>
+        <Lottery :prize="3"></Lottery>
     </div>
 </template>
 
